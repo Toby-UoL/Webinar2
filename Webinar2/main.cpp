@@ -29,7 +29,6 @@ int main() {
 	   std::cin >> forename;
 	   std::cout << "Enter pupil " << student_counter << " lastname: ";
 	   std::cin >> surname;
-	   age = get_age();
 	   std::string username = "User" + std::to_string(student_counter);
 	   std::cout << "Pupil " << student_counter << " username: " << username << std::endl;
 	   ++student_counter;
