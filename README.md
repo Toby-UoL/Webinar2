@@ -18,8 +18,12 @@ Functional requirements:
 Inputs              |   Processes	    |   Outputs
 
 Pupil first name    |   Validate age    |   List of usernames
+
 Pupil surname       |   Create username	
+
 Pupil age           |
+
+
 
 Design using pseudocode:
 
