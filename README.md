@@ -15,34 +15,43 @@ The program should output a list of usernames for the teacher.
 Functional requirements:
 
 
-Inputs              |   Processes	    |   Outputs
+    Inputs: 
 
-Pupil first name    |   Validate age    |   List of usernames
+    Pupil first name 
+    Pupil surname 
+    Pupil age 
 
-Pupil surname       |   Create username	
 
-Pupil age           |
+    Processes:          
 
+    Validate age
+    Create username
+
+
+    Outputs:
+
+    List of usernames
+ 
 
 
 Design using pseudocode:
 
-Main steps (algorithim)
+    Main steps (algorithim)
 
 
-1 Initialise username
+        1 Initialise username
 
-2 Start fixed loop for twenty pupils
+        2 Start fixed loop for twenty pupils
 
-    2.1 Get first name and surname from user
+            2.1 Get first name and surname from user
 
-    2.2 Get valid age from user
+            2.2 Get valid age from user
 
-    2.3 Generate username
+            2.3 Generate username
 
-    2.4 Display "Username", index, "is" username
+            2.4 Display "Username", index, "is" username
 
-3 End fixed loop
+        3 End fixed loop
 
 
 Version 1 contains no validation
