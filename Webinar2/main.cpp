@@ -1,19 +1,37 @@
 #include <iostream>
 #include <string>
 
-static int get_age() {  
-	int age = 0; // Initialize the variable to avoid uninitialized memory usage  
-	std::cout << "Enter pupil age: ";  
-	bool valid_input = false;  
-	while (!valid_input) {  
-		std::cin >> age; // Read input from the user  
-		if (age < 5 || age > 18) {  
-			std::cout << "Age must be between 5 and 18. Please enter a valid age: ";  
-		} else {  
-			valid_input = true; // Valid input received  
-		}  
-	}  
-	return age;  
+static void clear_error_flags()
+{
+	// clear error flags
+	std::cin.clear();
+	// Wrong input remains on the stream, so you need to get rid of it
+	std::cin.ignore(INT_MAX, '\n');
+}
+
+int get_age(int student_counter)
+{
+	int input;
+	bool valid = false;
+	while (!valid) { // repeat as long as the input is not valid
+		std::cout << "Enter pupil " << student_counter << " age: ";
+		std::cin >> input;
+		if (std::cin.fail())
+		{
+			std::cout << "Wrong input! " << std::endl;
+			clear_error_flags();
+
+		}
+		else if (input < 5 || input > 18)
+		{
+			std::cout << "Age must be between 05 and 18" << std::endl;
+		}
+		else
+		{
+			valid = true;
+		}
+	}
+	return input;
 }
 
 
@@ -29,12 +47,7 @@ int main() {
 	   std::cin >> forename;
 	   std::cout << "Enter pupil " << student_counter << " lastname: ";
 	   std::cin >> surname;
-<<<<<<<<< Temporary merge branch 1
-	   std::cout << "Enter pupil " << student_counter << " age: ";
-	   std::cin >> age;
-=========
-	   age = get_age();
->>>>>>>>> Temporary merge branch 2
+	   age = get_age(student_counter);
 	   std::string username = "User" + std::to_string(student_counter);
 	   std::cout << "Pupil " << student_counter << " username: " << username << std::endl;
 	   ++student_counter;
