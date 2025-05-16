@@ -29,7 +29,12 @@ int main() {
 	   std::cin >> forename;
 	   std::cout << "Enter pupil " << student_counter << " lastname: ";
 	   std::cin >> surname;
-	   age = get_age(); // Call the function to get a valid age
+<<<<<<<<< Temporary merge branch 1
+	   std::cout << "Enter pupil " << student_counter << " age: ";
+	   std::cin >> age;
+=========
+	   age = get_age();
+>>>>>>>>> Temporary merge branch 2
 	   std::string username = "User" + std::to_string(student_counter);
 	   std::cout << "Pupil " << student_counter << " username: " << username << std::endl;
 	   ++student_counter;
